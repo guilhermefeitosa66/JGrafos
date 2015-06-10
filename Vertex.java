@@ -15,7 +15,7 @@ public class Vertex implements Serializable
     this.x = x;
     this.y = y;
     this.relations = new ArrayList<Vertex>();
-    this.color = new Color(180, 250, 100);
+    this.color = new Color(255, 132, 0);
   }
 
   public boolean equals(Vertex v)

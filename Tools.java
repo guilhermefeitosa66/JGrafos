@@ -34,7 +34,7 @@ public class Tools extends JFrame
     this.main = main;
     //setLayout(null);
 
-    //colorSelected = new Color(180, 250, 100);
+    //colorSelected = new Color(255, 132, 0);
     colorSelected = new Color(200, 200, 200);
     colorDefault = new Color(255, 255, 255);
 
@@ -169,9 +169,9 @@ public class Tools extends JFrame
     toolAddRelation.setBackground(colorDefault);
     toolRemoveRelation.setBackground(colorDefault);
     /*Main objects*/
-    if(this.main.vertexA != null){this.main.vertexA.color = new Color(180, 250, 100);}
-    if(this.main.vertexB != null){this.main.vertexB.color = new Color(180, 250, 100);}
-    if(this.main.vertexSelected != null){this.main.vertexSelected.color = new Color(180, 250, 100);}
+    if(this.main.vertexA != null){this.main.vertexA.color = new Color(255, 132, 0);}
+    if(this.main.vertexB != null){this.main.vertexB.color = new Color(255, 132, 0);}
+    if(this.main.vertexSelected != null){this.main.vertexSelected.color = new Color(255, 132, 0);}
     this.main.vertexA = null;
     this.main.vertexB = null;
     this.main.vertexSelected = null;

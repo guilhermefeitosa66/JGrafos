@@ -67,7 +67,7 @@ public class Main extends JFrame implements Runnable, MouseListener, MouseMotion
     }
     /*Draw edges*/
     bbg.setColor(new Color(0, 0, 0));
-    bbg.setStroke(new BasicStroke(2));
+    bbg.setStroke(new BasicStroke(1));
     for(int i = 0; i < grafo.vertices.size(); i++)
     {
       for(int j = 0; j < grafo.vertices.get(i).relations.size(); j++)
@@ -116,7 +116,7 @@ public class Main extends JFrame implements Runnable, MouseListener, MouseMotion
         Vertex vertex = new Vertex(e.getX(), e.getY());
         vertexSelected = grafo.select(vertex);
       }else{
-        vertexSelected.color = new Color(180, 250, 100);
+        vertexSelected.color = new Color(255, 132, 0);
         vertexSelected = null;
       }  
     }
@@ -149,8 +149,8 @@ public class Main extends JFrame implements Runnable, MouseListener, MouseMotion
           vertexB = vertex;
           vertexA.addRelation(vertexB);
           vertexB.addRelation(vertexA);
-          vertexA.color = new Color(180, 250, 100);
-          vertexB.color = new Color(180, 250, 100);
+          vertexA.color = new Color(255, 132, 0);
+          vertexB.color = new Color(255, 132, 0);
           vertexA = null;
           vertexB = null;
         }
@@ -170,8 +170,8 @@ public class Main extends JFrame implements Runnable, MouseListener, MouseMotion
           vertexB = vertex;
           vertexA.removeRelation(vertexB);
           vertexB.removeRelation(vertexA);
-          vertexA.color = new Color(180, 250, 100);
-          vertexB.color = new Color(180, 250, 100);
+          vertexA.color = new Color(255, 132, 0);
+          vertexB.color = new Color(255, 132, 0);
           vertexA = null;
           vertexB = null;
         }

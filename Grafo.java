@@ -28,7 +28,7 @@ public class Grafo implements Serializable
       if(!area.isEmpty())
       {
         v = this.vertices.get(i);
-        v.color = new Color(255, 0, 0);
+        v.color = new Color(205, 82, 0);
       }
     }
 
