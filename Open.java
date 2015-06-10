@@ -17,7 +17,8 @@ public class Open
       return grafo;
     }catch(Exception e){
       System.out.println("error opening...");
-      return null;
+      //return null;
+      return new Grafo();
     }
   }
 }
