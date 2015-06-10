@@ -1,0 +1,4 @@
+Manifest-Version: 1.0
+Class-Path: libA/io.jar
+Created-By: Guiherme Feitosa <guilhermefeitosa66@gmail.com>
+Main-Class: Main

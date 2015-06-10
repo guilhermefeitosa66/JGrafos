@@ -43,7 +43,7 @@ public class Tools extends JFrame
     toolAddRelation = new JButton("relação");
     toolRemoveRelation = new JButton("relação");
 
-    toolSelect.setIcon(new ImageIcon("icons/select.png"));
+    toolSelect.setIcon(new ImageIcon("select.png"));
     toolAddVertex.setIcon(new ImageIcon("icons/add-v.png"));
     toolRemoveVertex.setIcon(new ImageIcon("icons/remove-v.png"));
     toolAddRelation.setIcon(new ImageIcon("icons/add-r.png"));
