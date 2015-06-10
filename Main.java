@@ -88,16 +88,6 @@ public class Main extends JFrame implements Runnable, MouseListener, MouseMotion
       bbg.fill(grafo.vertices.get(i).shape());
     }
     
-    // bbg.setColor(new Color(0, 0, 0));
-    // bbg.setStroke(new BasicStroke(2));
-    // bbg.drawLine(200+15, 200+15, 300+15, 100+15);
-    // bbg.drawLine(300+15, 100+15, 400+15, 200+15);
-    // bbg.drawString(""+grafo.vertices.size(), 100,100);
-    // bbg.setColor(new Color(180, 250, 100));
-    // bbg.fill(v1.shape());
-    // bbg.fill(v2.shape());
-    // bbg.fill(v3.shape());
-
     g.drawImage(backBuffer, 0, 0, this);
   }
 
@@ -205,7 +195,11 @@ public class Main extends JFrame implements Runnable, MouseListener, MouseMotion
     {
       if(vertexSelected != null)
       {
-        vertexSelected.offset(e.getX()-15, e.getY()-15);
+        //vertexSelected.offset(e.getX()-15, e.getY()-15);
+        vertexSelected.offset(
+          e.getX() - (e.getX() % 15), 
+          e.getY() - (e.getY() % 15)
+        );
       }
     }
   }
