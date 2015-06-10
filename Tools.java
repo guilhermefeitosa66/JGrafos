@@ -20,7 +20,7 @@ public class Tools extends JFrame
 
   public Tools(Main main)
   {
-    setTitle("Ferramentas");
+    setTitle("JGrafos - Ferramentas");
     setSize(WINDOW_WIDTH, WINDOW_HEIGHT);
     setResizable(false);
     setDefaultCloseOperation(EXIT_ON_CLOSE);

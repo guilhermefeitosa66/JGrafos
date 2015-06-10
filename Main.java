@@ -18,7 +18,7 @@ public class Main extends JFrame implements Runnable, MouseListener, MouseMotion
 
   public void init()
   {
-    setTitle("Grafos");
+    setTitle("JGrafos - Novo grafo");
     setSize(WINDOW_WIDTH, WINDOW_HEIGHT);
     setResizable(false);
     setDefaultCloseOperation(EXIT_ON_CLOSE);
