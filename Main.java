@@ -53,6 +53,18 @@ public class Main extends JFrame implements Runnable, MouseListener, MouseMotion
     bbg.setColor(new Color(255, 255, 255)); //Color.WHITE
     bbg.fillRect(0, 0, WINDOW_WIDTH, WINDOW_HEIGHT);
     
+    /*Draw grid*/
+    bbg.setColor(new Color(230, 230, 230));
+    bbg.setStroke(new BasicStroke(1));
+    for(int i = 30; i < WINDOW_WIDTH; i += 30)
+    {
+      bbg.drawLine(i, 0, i, WINDOW_WIDTH);
+    }
+
+    for(int i = 30; i < WINDOW_HEIGHT; i += 30)
+    {
+      bbg.drawLine(0, i, WINDOW_WIDTH, i);
+    }
     /*Draw edges*/
     bbg.setColor(new Color(0, 0, 0));
     bbg.setStroke(new BasicStroke(2));

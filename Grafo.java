@@ -1,8 +1,9 @@
 import java.util.*;
 import java.awt.*;
 import java.awt.geom.*;
+import java.io.Serializable;
 
-public class Grafo
+public class Grafo implements Serializable
 {
   ArrayList<Vertex> vertices;
 

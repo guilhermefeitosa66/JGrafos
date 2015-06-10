@@ -8,6 +8,9 @@ public class Tools extends JFrame
 {
   private int WINDOW_WIDTH = 800;
   private int WINDOW_HEIGHT = 65;
+  private JButton toolNew;
+  private JButton toolSave;
+  private JButton toolOpen;
   private JButton toolSelect;
   private JButton toolAddVertex;
   private JButton toolRemoveVertex;
@@ -31,32 +34,67 @@ public class Tools extends JFrame
     this.main = main;
     //setLayout(null);
 
-    colorSelected = new Color(180, 250, 100);
+    //colorSelected = new Color(180, 250, 100);
+    colorSelected = new Color(200, 200, 200);
     colorDefault = new Color(255, 255, 255);
 
     Container container = getContentPane();
     container.setLayout(new FlowLayout());
 
-    toolSelect = new JButton("seleção");
-    toolAddVertex = new JButton("vértice");
-    toolRemoveVertex = new JButton("vértice");
-    toolAddRelation = new JButton("relação");
-    toolRemoveRelation = new JButton("relação");
+    toolNew = new JButton("Novo");
+    toolSave = new JButton("Salvar");
+    toolOpen = new JButton("Abrir");
+    toolSelect = new JButton("Mover");
+    toolAddVertex = new JButton("[+]Vértice");
+    toolRemoveVertex = new JButton("[-]Vértice");
+    toolAddRelation = new JButton("[+]Relação");
+    toolRemoveRelation = new JButton("[-]Relação");
 
-    toolSelect.setIcon(new ImageIcon("select.png"));
-    toolAddVertex.setIcon(new ImageIcon("icons/add-v.png"));
-    toolRemoveVertex.setIcon(new ImageIcon("icons/remove-v.png"));
-    toolAddRelation.setIcon(new ImageIcon("icons/add-r.png"));
-    toolRemoveRelation.setIcon(new ImageIcon("icons/remove-r.png"));
+    // toolSelect.setIcon(new ImageIcon("icons/select.png"));
+    // toolAddVertex.setIcon(new ImageIcon("icons/add-v.png"));
+    // toolRemoveVertex.setIcon(new ImageIcon("icons/remove-v.png"));
+    // toolAddRelation.setIcon(new ImageIcon("icons/add-r.png"));
+    // toolRemoveRelation.setIcon(new ImageIcon("icons/remove-r.png"));
 
     defaults();
     toolSelect.setBackground(colorSelected);
 
+    container.add(toolNew);
+    container.add(toolSave);
+    container.add(toolOpen);
     container.add(toolSelect);
     container.add(toolAddVertex);
     container.add(toolRemoveVertex);
     container.add(toolAddRelation);
     container.add(toolRemoveRelation);
+
+    toolNew.addActionListener(new ActionListener()
+    {
+      public void actionPerformed(ActionEvent e)
+      {
+        main.grafo = new Grafo();
+      }
+    });
+
+    toolSave.addActionListener(new ActionListener()
+    {
+      public void actionPerformed(ActionEvent e)
+      {
+        String fileName = JOptionPane.showInputDialog(main, "Nome do arquivo");
+        Save save = new Save();
+        save.save(main.grafo, fileName);
+      }
+    });
+
+    toolOpen.addActionListener(new ActionListener()
+    {
+      public void actionPerformed(ActionEvent e)
+      {
+        String fileName = JOptionPane.showInputDialog(main, "Nome do arquivo");
+        Open open = new Open();
+        main.grafo = open.open(fileName);
+      }
+    });
 
     toolSelect.addActionListener(new ActionListener()
     {
@@ -122,6 +160,9 @@ public class Tools extends JFrame
   public void defaults()
   {
     /*Button colors*/
+    toolNew.setBackground(colorDefault);
+    toolSave.setBackground(colorDefault);
+    toolOpen.setBackground(colorDefault);
     toolSelect.setBackground(colorDefault);
     toolAddVertex.setBackground(colorDefault);
     toolRemoveVertex.setBackground(colorDefault);

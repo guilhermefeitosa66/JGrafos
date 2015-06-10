@@ -1,8 +1,9 @@
 import java.util.*;
 import java.awt.*;
 import java.awt.geom.*;
+import java.io.Serializable;
 
-public class Vertex
+public class Vertex implements Serializable
 {
   private int x;
   private int y;

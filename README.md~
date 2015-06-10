@@ -4,6 +4,6 @@
 # to run a jar file:
 # => java -jar app.jar
 
-# or just compile and run the application:
+# or just compile and execute the application:
 # => javac Main.java
 # => java Main
